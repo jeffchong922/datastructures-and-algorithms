@@ -1,0 +1,1 @@
+export type IPredicateSwap<T> = (a: T, b: T) => boolean
