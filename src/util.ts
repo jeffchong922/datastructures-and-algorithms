@@ -36,3 +36,16 @@ export function defaultPredicateSwap<T> (a: T, b: T): boolean {
     ? true
     : false
 }
+
+/**
+ * a < b 时选择 a
+ */
+export function defaultSelectTheLeftOne<T> (a: T, b: T): boolean {
+  if (typeof a !== 'number') {
+    throw new TypeError('默认选择函数只支持number类型')
+  }
+
+  return a < b
+    ? true
+    : false
+}
