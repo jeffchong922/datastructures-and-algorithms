@@ -26,6 +26,14 @@ export function getRandomInt (max: number, min: number = 0): number {
 }
 
 /**
+ * 返回参数值的总和的一半的整数
+ */
+export function getSumMiddleInt (...array: number[]): number {
+  const sum = array.reduce((result, nextVal) => result + nextVal)
+  return Math.floor(sum / 2)
+}
+
+/**
  *  a > b 时交换
  */
 export function defaultPredicateSwap<T> (a: T, b: T): boolean {
